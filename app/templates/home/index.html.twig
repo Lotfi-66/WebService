@@ -1,0 +1,13 @@
+{% block title %}{% endblock %}
+
+{% block body %}
+<div>
+{{ form_start (form) }}
+{{ form_rest (form) }}
+{{ form_end (form) }}
+<div>
+
+{% for image in images %}
+    <img src="{{image}} " alt="image"/>
+{% endfor %}
+{% endblock %}

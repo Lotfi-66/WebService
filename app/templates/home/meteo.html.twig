@@ -1,0 +1,18 @@
+
+
+{# {% extends 'base.html.twig' %} #}
+
+{% block title %}Meteo{% endblock %}
+
+{% block body %}
+<div>
+    {{ form_start(form) }}
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+</div>
+{% if datas | length > 0 %}
+    <div><img src="{{asset("images/png/"~datas["data_current"]["pictocode_detailed"]~"_day.png")}}"/></div>
+    <div> temperature :{{ datas['data_current']['temperature'] }}</div>
+{% endif %}
+{% endblock %}
